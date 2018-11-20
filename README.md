@@ -17,9 +17,10 @@ Android app for tracking IP using https://ipapi.co/
 
 # External Libraries
 The following External Lbraries were used in the app
+
 | Name | Link |
 | ------ | ------ |
-| Async Http | https://github.com/loopj/android-async-http/ |
+| Async Http | https://github.com/loopj/android-async-http |
 
 # Author(s)
 **Olusegun Festus**
