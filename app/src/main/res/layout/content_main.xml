@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/myip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your IP"
+                android:textAlignment="textEnd"/>
+
+            <EditText
+                android:id="@+id/ip_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter an IP"
+                android:padding="10dp"
+                android:layout_below="@id/myip"
+                android:background="@drawable/et_bg"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id="@+id/ip_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ip_et"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:text="SUBMIT"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/card1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp">
+            <ScrollView
+                android:layout_above="@id/btn_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:id="@+id/tbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:layout_marginBottom="5dp">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="IP Address"
+                            android:background="@drawable/border1"
+                            android:padding="5dp"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_ip"
+                            android:text="IP Address"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="City"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:background="@drawable/border"/>
+
+                        <TextView
+                            android:id="@+id/ip_city"
+                            android:text="City"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Region"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_region"
+                            android:text="Region"
+                            android:background="@drawable/border1"
+                            android:padding="5dp"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Region Code"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_region_code"
+                            android:text="Region Code"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Country"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_country"
+                            android:text="Country"
+                            android:background="@drawable/border1"
+                            android:padding="5dp"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Country Name"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_country_name"
+                            android:text="Country Name"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Continent"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_continent"
+                            android:text="Continent"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="European Union"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_eu"
+                            android:text="European Union"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Postal"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_postal"
+                            android:text="Postal"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Long &amp; Lat"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_longlat"
+                            android:text="Long &amp; Lat"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Time Zone"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_timezone"
+                            android:text="TIme Zone"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Calling Code"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_callcode"
+                            android:text="Calling Code"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Currency"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_curr"
+                            android:text="Currency"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Language"
+                            android:padding="5dp"
+                            android:background="@drawable/border"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_lang"
+                            android:text="Language"
+                            android:padding="5dp"
+                            android:background="@drawable/border"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="ASN"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_asn"
+                            android:text="ASN"
+                            android:padding="5dp"
+                            android:background="@drawable/border1"
+                            android:textSize="15sp"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Organization"
+                            android:padding="5dp"
+                            android:background="@drawable/border"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/ip_org"
+                            android:text="Organization"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/border"
+                            android:textSize="15sp"/>
+                    </TableRow>
+
+                </TableLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btn_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:text="View in Map" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
